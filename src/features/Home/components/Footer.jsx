@@ -82,14 +82,14 @@ const Footer = () => {
       <div className="bg-slate-800">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-100  text-sm text-center sm:text-left">
-            © Cybersoft
+            © CYBERSOFT ACADEMY BC38
             <a
-              href="https://twitter.com/knyttneve"
+              href="#"
               rel="noopener noreferrer"
               className="text-gray-100 ml-4 no-underline"
               target="_blank"
             >
-              Võ công Tuấn Lộc - Nguyễn Lê Anh Khoa
+              NHÓM: ĐẶNG MINH TRIẾT-BÙI SỸ NAM SƠN
             </a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
