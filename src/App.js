@@ -10,11 +10,22 @@ import "./App.css";
 import UserListRegister from "features/Admin/Register/UserListRegister";
 import CourseListRegister from "features/Admin/Register/CourseListRegister";
 
+import Category from "features/Home/Category";
+import Home from "features/Home/Home";
+import HomeTemplate from "templates/HomeTemplate/HomeTemplate";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        
+        <Route path="/" exact element={<HomeTemplate />}>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/danh-muc-khoa-hoc" exact element={<Category />} />
+           </Route>
+
+
+
+        {/* admin */}
         <Route path="/admin" exact element={<AdminTemplate />}>
           <Route path="/admin/users" exact element={<UserList />} />
           <Route path="/admin/users/add-user" exact element={<AddUser />} />
