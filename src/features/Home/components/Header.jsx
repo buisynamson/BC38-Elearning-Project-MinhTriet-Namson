@@ -5,14 +5,14 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const items = [
   {
     label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+      <Link to="/">
         Trang chủ
-      </a>
+      </Link>
     ),
     key: 'Signin',
 
@@ -20,27 +20,27 @@ const items = [
   ,
   {
     label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+      <Link to="/danh-muc-khoa-hoc" >
         Khoá học
-      </a>
+      </Link>
     ),
     key: 'Signup',
   }
   ,
   {
     label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+      <Link to="" >
         Về chúng tôi
-      </a>
+      </Link>
     ),
     key: 'Signup1',
   }
   ,
   {
     label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+      <Link to="" >
         Liên hệ
-      </a>
+      </Link>
     ),
     key: 'Signup2',
   }

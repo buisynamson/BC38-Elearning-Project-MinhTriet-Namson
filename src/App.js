@@ -23,7 +23,7 @@ function App() {
         <Route path="/" exact element={<HomeTemplate />}>
           <Route path="/" exact element={<Home />} />
           <Route path="/danh-muc-khoa-hoc" exact element={<Category />} />
-          </Route>
+        </Route>
           
           {/* Authorize User */}
           <Route path="/login" element={<Login/>}/>

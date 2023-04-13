@@ -3,7 +3,7 @@ import actions from "./type";
 
 export const signinAction = (signInInfo) => async (next) => {
   try {
-    const res = await signin(signInInfo);
+     const res = await signin(signInInfo);
 
     if (res.status === 200) {
       alert("Đăng nhập thành công");
@@ -13,3 +13,5 @@ export const signinAction = (signInInfo) => async (next) => {
     console.log(error);
   }
 };
+
+
