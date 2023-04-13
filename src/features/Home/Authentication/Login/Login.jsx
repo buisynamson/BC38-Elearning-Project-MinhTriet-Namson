@@ -1,3 +1,4 @@
+import { signinAction } from '../../../User/redux/action';
 import { useFormik } from 'formik';
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux';
@@ -45,7 +46,7 @@ const Login = () => {
         initialValues,
         onSubmit : async values =>{
           
-        // const result = await  dispatch(userLogin(values))
+        //  const result = await  dispatch(signinAction(values))
           
         // result && navigate("/");
         },

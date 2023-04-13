@@ -11,11 +11,11 @@ export const fetchCourseListCategory = (maDanhMuc) => async (next) => {
 };
 
 export const fetchCourseListPage =
-  (tenKhoaHoc = null, page = 1) =>
+  (tenKhoaHoc = null, page) =>
   async (next) => {
     try {
       const res = await getCourseListPage(tenKhoaHoc, page);
-      next({ type: actions.SET_COURSE_LIST_PAGE, payload: res.data });
+      next({ type: actions.SET_COURSE_LIST_PAGE, payload: res.data.items });
     } catch (error) {
       console.log(error);
     }
