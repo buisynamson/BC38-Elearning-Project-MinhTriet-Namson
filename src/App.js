@@ -15,6 +15,7 @@ import Home from "features/Home/Home";
 import HomeTemplate from "templates/HomeTemplate/HomeTemplate";
 import Login from "features/Home/Authentication/Login/Login";
 import Signup from "features/Home/Authentication/Signup/Signup";
+import Course from "features/Home/Course";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" exact element={<HomeTemplate />}>
           <Route path="/" exact element={<Home />} />
           <Route path="/danh-muc-khoa-hoc" exact element={<Category />} />
+          <Route path="/khoa-hoc/:id" element={<Course/>}/>
         </Route>
           
           {/* Authorize User */}

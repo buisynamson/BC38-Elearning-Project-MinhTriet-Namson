@@ -8,9 +8,12 @@ export const signinAction = (signInInfo) => async (next) => {
     if (res.status === 200) {
       alert("Đăng nhập thành công");
       next({ type: actions.USER_SIGNIN, payload: res.data });
+      return true;
     }
+
   } catch (error) {
-    console.log(error);
+    alert(error.response.data)
+    return false;
   }
 };
 

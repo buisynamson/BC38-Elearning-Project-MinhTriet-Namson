@@ -17,6 +17,15 @@ export const getCourseListPage = async (tenKhoaHoc, page) => {
   });
 };
 
+
+export const getDetailCourse = async (maKhoaHoc)=>{
+  return await requester({
+    method: "GET",
+    url: apiPath.DETAIL_COURSE,
+    params: { maKhoaHoc },
+  })
+}
+
 export const registerCourse = async (formData) => {
   return await requester({
     method: "POST",
