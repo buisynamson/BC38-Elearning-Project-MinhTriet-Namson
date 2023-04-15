@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import { Avatar, Card, Pagination } from "antd";
-import Meta from "antd/es/card/Meta";
+
+import { Card, Pagination } from "antd";
+
 import Search from "antd/es/transfer/search";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCourseListPage } from "./redux/action";
 
-import InfiniteScroll from "react-infinite-scroll-component";
 import { NavLink, useNavigate, useSearchParams } from "react-router-dom";
-import { Button } from "antd/es/radio";
+
 
 export default function Category() {
   const dispatch = useDispatch();

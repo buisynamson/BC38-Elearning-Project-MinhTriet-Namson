@@ -16,3 +16,13 @@ export const signup = async (signInInfo) => {
     data: signInInfo,
   });
 };
+
+export const fetchProfile = async (token) => {
+  return await requester({
+    method: "POST",
+    url: apiPath.USER_INFO,
+    headers:  {
+      Authorization : "Bearer " + token
+    },
+  });
+};

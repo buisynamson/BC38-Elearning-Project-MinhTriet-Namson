@@ -16,6 +16,7 @@ import HomeTemplate from "templates/HomeTemplate/HomeTemplate";
 import Login from "features/Home/Authentication/Login/Login";
 import Signup from "features/Home/Authentication/Signup/Signup";
 import Course from "features/Home/Course";
+import PrivateRoute from "features/Home/HOCs/PrivateRoute";
 
 function App() {
   return (
@@ -24,12 +25,14 @@ function App() {
         <Route path="/" exact element={<HomeTemplate />}>
           <Route path="/" exact element={<Home />} />
           <Route path="/danh-muc-khoa-hoc" exact element={<Category />} />
-          <Route path="/khoa-hoc/:id" element={<Course/>}/>
+          <Route element={<PrivateRoute />}>
+            <Route path="/khoa-hoc/:id" element={<Course />} />
+          </Route>
         </Route>
-          
-          {/* Authorize User */}
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/signup" element={<Signup/>}/>
+
+        {/* Authorize User */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
         {/* admin */}
         <Route path="/admin" exact element={<AdminTemplate />}>

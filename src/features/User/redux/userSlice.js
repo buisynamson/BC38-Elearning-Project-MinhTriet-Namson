@@ -8,6 +8,7 @@ if (localStorage.getItem("USER_LOGIN")) {
 
 const initialState = {
   userSignin: user,
+  userInfo: {}
 };
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -18,7 +19,9 @@ const reducer = (state = initialState, { type, payload }) => {
         localStorage.setItem("TOKEN", payload.accessToken);
         draft.userSignin = payload;
         break;
-
+      case actions.USER_LOGGED : 
+      draft.userInfo = payload;
+      break;
       default:
         break;
     }

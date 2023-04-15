@@ -11,6 +11,7 @@ export const apiPath = {
   GET_COURSE_LIST: "/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc_PhanTrang",
   ADD_COURSE: "/api/QuanLyKhoaHoc/ThemKhoaHoc",
   ACCOUNT_INFO: "/api/QuanLyNguoiDung/ThongTinNguoiDung",
+  USER_INFO: "/api/QuanLyNguoiDung/ThongTinTaiKhoan",
   CATEGORY_COURSE: "/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc",
   UPLOAD_IMAGE_COURSE: "/api/QuanLyKhoaHoc/UploadHinhAnhKhoaHoc",
   DELETE_COURSE: "/api/QuanLyKhoaHoc/XoaKhoaHoc",

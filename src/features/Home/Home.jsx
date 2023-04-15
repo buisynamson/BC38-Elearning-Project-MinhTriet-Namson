@@ -4,6 +4,7 @@ import HomeCarousel from "./components/HomeCarousel";
 import HomeIntro from "./components/HomeIntro";
 
 const Home = () => {
+ 
   return (
     <div>
       <HomeCarousel />
