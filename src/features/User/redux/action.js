@@ -1,5 +1,5 @@
 import Swal from "sweetalert2";
-import { signin, signup, fetchProfile } from "../utils/userService";
+import { signin, signup, fetchProfile, fetchPersonalInf } from "../utils/userService";
 import actions from "./type";
 
 export const signinAction = (signInInfo) => async (next) => {
@@ -61,6 +61,16 @@ export const fetchUserProfile = (token) => async (next) =>{
     next({ type: actions.USER_LOGGED, payload: res.data })
   }
   catch (err){
+    console.log(err);
+  }
+}
+
+export const fetchPersonalInfo = (token) => async (next) =>{
+  try{
+    const res = await fetchPersonalInf(token);
+    next({ type: actions.USER_INFO, payload: res.data })
+  }
+  catch(err){
     console.log(err);
   }
 }

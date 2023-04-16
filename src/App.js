@@ -17,6 +17,7 @@ import Login from "features/Home/Authentication/Login/Login";
 import Signup from "features/Home/Authentication/Signup/Signup";
 import Course from "features/Home/Course";
 import PrivateRoute from "features/Home/HOCs/PrivateRoute";
+import PersonalInfo from "features/Home/PersonalInfo";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/danh-muc-khoa-hoc" exact element={<Category />} />
           <Route element={<PrivateRoute />}>
             <Route path="/khoa-hoc/:id" element={<Course />} />
+            <Route path="/thong-tin-ca-nhan" element={<PersonalInfo/>}/>
           </Route>
         </Route>
 

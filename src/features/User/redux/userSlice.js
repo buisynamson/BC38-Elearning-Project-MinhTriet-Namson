@@ -8,7 +8,8 @@ if (localStorage.getItem("USER_LOGIN")) {
 
 const initialState = {
   userSignin: user,
-  userInfo: {}
+  userInfo: {},
+  personalInfo:{}
 };
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -22,7 +23,15 @@ const reducer = (state = initialState, { type, payload }) => {
       case actions.USER_LOGGED : 
       draft.userInfo = payload;
       break;
-      default:
+      case actions.USER_INFO : 
+      draft.personalInfo = payload;
+      break;
+      case actions.USER_LOGOUT:
+        draft.personalInfo = {};
+        draft.userInfo = {};
+        draft.userSignin = {}
+        break;
+        default:
         break;
     }
   });

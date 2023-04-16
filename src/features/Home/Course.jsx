@@ -1,19 +1,21 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { fetchDetailCourse } from "./redux/action";
+import { enrollCourse, fetchDetailCourse } from "./redux/action";
 import { Button, Col, Row } from "antd";
 
 const Course = () => {
   const params = useParams();
   const dispatch = useDispatch();
   const courseInfo = useSelector((state) => state.homeReducer.detailCourse);
+  const userInfo = useSelector(state => state.userReducer.userInfo);
+
   useEffect(() => {
     dispatch(fetchDetailCourse(params.id));
   }, []);
-  console.log(courseInfo);
+
   return (
-    <div className="container mx-auto py-14">
+    <div className="container mx-auto py-14 px-40">
       <Row>
         <Col span={8}>
           <div className="container">
@@ -51,7 +53,7 @@ const Course = () => {
                 {courseInfo?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
               </p>
 
-              <Button type="default" className="text-2xl h-max  font-semibold bg-black text-white mt-5">Đăng ký</Button>
+              <Button type="default" onClickCapture={()=>{return dispatch(enrollCourse({maKhoaHoc: params.id, taiKhoan: userInfo?.taiKhoan}))}} className="text-2xl h-max  font-semibold bg-black text-white mt-5">Đăng ký</Button>
             </div>
           </div>
         </Col>

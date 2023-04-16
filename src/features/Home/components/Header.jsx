@@ -1,23 +1,23 @@
 import { Button } from "antd";
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 
-import {  NavLink } from "react-router-dom";
-
+import {  NavLink, useNavigate } from "react-router-dom";
+import actions from "../../User/redux/type";
 
 export default function Header() {
-
+  const dispatch = useDispatch()
   const handleLogOut = async () => {
     await localStorage.removeItem("TOKEN");
-    // dispatch({
-    //   type: USER_LOG_OUT,
-    // });
+    dispatch({
+      type: actions.USER_LOGOUT,
+    });
   };
 
   const userSignin = useSelector(state=> state.userReducer.userSignin);
   const userLogged = useSelector(state=> state.userReducer.userInfo);
-
+  const navigate = useNavigate();
   const renderUserAction = () => {
     if (localStorage.getItem("TOKEN") === null) {
       return (
@@ -30,7 +30,7 @@ export default function Header() {
     } else {
       return (
         <div className="flex items-center mr-10 ">
-          <Button type="ghost" className="mr-2 text-white text-lg py-0">
+          <Button onClickCapture={()=> { return navigate("/thong-tin-ca-nhan")}} type="ghost" className="mr-2 text-white text-lg py-0">
             Hello,{" "}
             <b className="text-yellow-400">
              {userSignin?.hoTen || userLogged?.hoTen}

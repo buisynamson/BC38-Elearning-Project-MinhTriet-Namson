@@ -26,3 +26,14 @@ export const fetchProfile = async (token) => {
     },
   });
 };
+
+
+export const fetchPersonalInf = async (token) => {
+  return await requester({
+    method: "POST",
+    url: apiPath.ACCOUNT_INFO,
+    headers:  {
+      Authorization : "Bearer " + token
+    },
+  });
+};
