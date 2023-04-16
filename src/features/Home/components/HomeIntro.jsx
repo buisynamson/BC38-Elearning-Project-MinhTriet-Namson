@@ -6,7 +6,7 @@ const HomeIntro = () => {
       <div className="container px-2 py-20 mx-auto">
         <div className="grid grid-cols-2">
           <div className="p-4 w-full">
-            <div className="h-full bg-yellow-200 text-black p-8 rounded">
+            <div className="h-full bg-gray-700 text-white p-8 rounded">
               <h3>KHÓA HỌC</h3>
               <p className="leading-relaxed mb-6 mt-2">
                 Học qua dự án thực tế, học đi đôi với hành, không lý thuyết lan
@@ -28,7 +28,7 @@ const HomeIntro = () => {
             </div>
           </div>
           <div className="p-4 w-full">
-            <div className="h-full bg-yellow-200 text-black p-8 rounded">
+            <div className="h-full bg-gray-700 text-white p-8 rounded">
               <h3>LỘ TRÌNH PHÙ HỢP</h3>
               <ul>
                 <li>Lộ trình bài bản từ zero tới chuyên nghiệp, nâng cao</li>
@@ -46,7 +46,7 @@ const HomeIntro = () => {
             </div>
           </div>
           <div className="p-4 w-full">
-            <div className="h-full bg-yellow-200 text-black p-8 rounded">
+            <div className="h-full bg-gray-700 text-white p-8 rounded">
               <h3>HỆ THỐNG HỌC TẬP</h3>
               <ul>
                 <li>
@@ -62,7 +62,7 @@ const HomeIntro = () => {
             </div>
           </div>
           <div className="p-4 w-full">
-            <div className="h-full bg-yellow-200 text-black p-8 rounded">
+            <div className="h-full bg-gray-700 text-white p-8 rounded">
               <h3>CHỨNG NHẬN</h3>
               <ul>
                 <li>Chấm bài và có thể vấn đáp trực tuyến để review</li>
