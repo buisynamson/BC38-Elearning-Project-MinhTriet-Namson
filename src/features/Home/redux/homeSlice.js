@@ -3,7 +3,7 @@ import produce from "immer";
 
 const initialState = { courseList: [],
    coursePage: {},
-  detailCourse: {}};
+    detailCourse: {}};
 
 const reducer = (state = initialState, { type, payload }) => {
   return produce(state, (draft) => {

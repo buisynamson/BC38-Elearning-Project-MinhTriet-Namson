@@ -27,7 +27,7 @@ const AdminTemplate = () => {
     if (userSignin.maLoaiNguoiDung !== "GV") {
       return navigate("/");
     }
-  }, [userSignin]);
+  }, [userSignin,]);
 
   return (
     <Layout
