@@ -88,9 +88,10 @@ const AdminTemplate = () => {
             </Button>
             <img
               src="/img/50d429ea5c9afe0ef9cb3c96f784bea4.jpg"
-              className="w-14 rounded-full mx-4"
+              className="w-14 rounded-full mx-3"
               alt=""
             />
+            <span className="text-black text-xl"> {userSignin?.hoTen || userLogged?.hoTen}</span>
           </div>
         </Header>
         <Content
