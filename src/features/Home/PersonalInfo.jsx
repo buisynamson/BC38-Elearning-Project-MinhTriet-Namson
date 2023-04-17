@@ -47,7 +47,9 @@ const PersonalInfo = () => {
         </Col>
       </Row>
 
-      <Collapse defaultActiveKey={["1"]} className="mt-10">
+      <div className="container pt-10">
+          <h1>Các khoá học đang tham gia:</h1>
+          <Collapse defaultActiveKey={["1"]} className="mt-5">
         {personalInfo?.chiTietKhoaHocGhiDanh?.map((course) => {
           return (
             <Panel
@@ -96,6 +98,8 @@ const PersonalInfo = () => {
           );
         })}
       </Collapse>
+      </div>
+      
     </div>
   );
 };
