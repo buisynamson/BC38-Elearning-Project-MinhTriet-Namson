@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <HomeCarousel />
       <HomeIntro />
-      <h3 className="text-center text-4xl mb-4">Khóa học</h3>
+      <h3 className="text-center text-4xl mb-4">KHÓA HỌC TẠI EDUMALL</h3>
       <CourseList />
     </div>
   );

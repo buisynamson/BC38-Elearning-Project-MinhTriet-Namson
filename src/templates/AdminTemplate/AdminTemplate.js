@@ -16,6 +16,7 @@ const { Header, Content, Sider } = Layout;
 
 const AdminTemplate = () => {
   const { userSignin } = useSelector((state) => state.userReducer);
+  const userLogged = useSelector((state) => state.userReducer.userInfo);
   const navigate = useNavigate();
 
   const [collapsed, setCollapsed] = useState(false);
@@ -30,11 +31,13 @@ const AdminTemplate = () => {
   }, [userSignin,]);
 
   return (
+<div>
     <Layout
       style={{
         minHeight: "100vh",
       }}
     >
+      
       <Sider
         collapsible
         collapsed={collapsed}
@@ -103,11 +106,16 @@ const AdminTemplate = () => {
               background: colorBgContainer,
             }}
           >
+                <h2 className="text-center font-bold text-2xl">
+    Welcome Admin <span className="text-2xl text-orange-600"> {userSignin?.hoTen || userLogged?.hoTen}</span>. Have a good day!
+  </h2>
+  <Button type="primary" onClickCapture={()=>navigate('/')}>VỀ TRANG CHỦ</Button>
             <Outlet />
           </div>
         </Content>
       </Layout>
     </Layout>
+    </div>
   );
 };
 export default AdminTemplate;

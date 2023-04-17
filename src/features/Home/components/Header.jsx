@@ -64,20 +64,6 @@ export default function Header() {
       );
     } else {
       return (
-        // <div className="flex items-center mr-10 ">
-        //   <Button onClickCapture={()=> { return navigate("/thong-tin-ca-nhan")}} type="ghost" className="mr-2 text-white text-lg py-0">
-        //     Hello,{" "}
-        //     <b className="text-yellow-400">
-        //      {userSignin?.hoTen || userLogged?.hoTen}
-        //     </b>
-        //   </Button>
-        //   <button
-        //     className="border-amber-300 bg-transparent cursor-pointer rounded-xl text-white p-2 hover:bg-yellow-400 hover:text-white font-bold uppercase transition-all"
-        //     onClick={handleLogOut}
-        //   >
-        //     Log out
-        //   </button>
-        // </div>
         <div>
           <Dropdown
             menu={{
