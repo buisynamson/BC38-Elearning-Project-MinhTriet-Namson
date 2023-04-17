@@ -29,28 +29,14 @@ const CourseList = () => {
           {courseList.length > 0 &&
             courseList.map((course) => {
               return (
-                <Col className="my-4" key={course.maKhoaHoc} span={6}>
+                <Col className="my-6" key={course.maKhoaHoc} lg={8} md={6} sm={24}>
                   <NavLink to={`/khoa-hoc/${course.maKhoaHoc}`}>
-                    <Card className="mx-3"
-                      hoverable
-                      style={{
-                        width: "300px",
-                        height: "100%",
-                      }}
-                      cover={
-                        <img
-                          className="w-full h-70 object-cover object-left-top"
-                          alt="example"
-                          src={course.hinhAnh}
-                        />
-                      }
-                    >
-                      <h3 className="text-yellow-500 font-normal">
-                        {course.danhMucKhoaHoc.tenDanhMucKhoaHoc}
-                      </h3>
+                    <Card style={{width: "350px"}} hoverable className="py-4">
+                    <div className="container ">
+                    <img className="h-40" src={course.hinhAnh} alt="" />
                       <h1 className="text-lg h-16 mt-2">{course.tenKhoaHoc}</h1>
                       <p className="h-16 text-gray-500">
-                        {truncateString(course.moTa, 70)}
+                        {truncateString(course.moTa, 30)}
                       </p>
                       <h4 className="text-base">GV: Trương Tấn Khải</h4>
                       <p>
@@ -72,7 +58,9 @@ const CourseList = () => {
                           Xem chi tiết
                         </Button>
                       </NavLink>
+                    </div>
                     </Card>
+
                   </NavLink>
                 </Col>
               );
