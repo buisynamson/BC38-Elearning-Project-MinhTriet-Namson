@@ -22,14 +22,14 @@ const PersonalInfo = () => {
   }, [personalInfo?.chiTietKhoaHocGhiDanh]);
 
   return (
-    <div className="container mx-auto px-60 py-10">
+    <div className="container mx-auto xl:px-60 py-10 md:px-10 sm:px-3">
       <Row>
-        <Col span={2}>
+        <Col lg={2} md={4} sm={5} xs={6}>
           <div className="container ">
             <img src="./img/user.png" className="w-full" alt="" />
           </div>
         </Col>
-        <Col span={22}>
+        <Col lg={22} md={20} sm={19} xs={18}>
           <div className="container pl-10">
             <p className="text-sm">
               <span className="font-bold text-lg">Tên:</span>{" "}
@@ -48,7 +48,7 @@ const PersonalInfo = () => {
       </Row>
 
       <div className="container pt-10">
-          <h1>Các khoá học đang tham gia:</h1>
+          <h2 className=" lg:text-2xl md:text-lg sm:text-sm ">Các khoá học đang tham gia:</h2>
           <Collapse defaultActiveKey={["1"]} className="mt-5">
         {personalInfo?.chiTietKhoaHocGhiDanh?.map((course) => {
           return (
@@ -57,13 +57,13 @@ const PersonalInfo = () => {
               header={course.tenKhoaHoc}
               key={course.maKhoaHoc}
             >
-              <div className="grid grid-cols-4">
-                <div className="">
+              <div className="xl:grid grid-cols-4 md:block">
+                <div className="xl:col-span-1  ">
                   <img className="w-full" src={course.hinhAnh} alt="" />
                 </div>
-                <div className="col-span-3 pl-10">
+                <div className="xl:col-span-3 xl:pl-10 pl-0">
                   <div className="grid grid-cols-3">
-                    <div className="col-span-2 px-10">
+                    <div className="col-span-2 lg:px-10 px-0">
                       <p className="text-sm font-normal">
                         <span className="font-bold text-lg">Mô tả:</span>{" "}
                         {course.moTa}

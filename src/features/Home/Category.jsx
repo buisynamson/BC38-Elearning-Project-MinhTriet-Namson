@@ -74,7 +74,7 @@ export default function Category() {
         />
       </div>
 
-      <div className="grid grid-cols-4 gap-7 ">{renderCourses()}</div>
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 ">{renderCourses()}</div>
 
       <Pagination
         className="text-center mt-6"

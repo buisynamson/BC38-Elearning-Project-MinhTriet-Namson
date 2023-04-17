@@ -15,21 +15,21 @@ const Course = () => {
   }, []);
 
   return (
-    <div className="container mx-auto py-14 px-40">
+    <div className="container mx-auto py-14 xl:px-40 lg:px-32 md:px-10 sm:px-4">
       <Row>
-        <Col span={8}>
+        <Col lg={8} md={6} sm={24}>
           <div className="container">
             <img className="w-full" src={courseInfo?.hinhAnh} alt="" />
           </div>
         </Col>
-        <Col span={16}>
-          <div className="container pl-20">
+        <Col lg={16} md={18} sm={24}>
+          <div className="container lg:pl-20 md:pl-10 sm:pl-0">
             <div className="title flex items-center justify-center">
               <h1>{courseInfo?.tenKhoaHoc}</h1> 
               <span className="text-lg ml-8">-{courseInfo?.nguoiTao?.hoTen}-</span>
             </div>
             <div className="body py-5">
-              <div className="subInfo flex justify-around mb-5">
+              <div className="subInfo justify-around mb-5 lg:flex md:flex sm:block">
                 <p>
                   <span className="font-semibold text-gray-500">Ngày tạo:</span>{" "}
                   {courseInfo?.ngayTao}
